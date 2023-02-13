@@ -1,5 +1,6 @@
 {
   "name": "redbery-app",
+  "homepage": "https://LukaDudauri7.github.io/Redberry",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
