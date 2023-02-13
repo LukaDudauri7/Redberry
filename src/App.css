@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('./Fonts/ninomtavrulibold.ttf');
+}
+  
+@font-face {
+    font-family: 'Helvetica';
+    src: url('./Fonts/HelveticaNeue.ttc') format("TTC");
+}
+  
+
+html{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
