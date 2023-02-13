@@ -1,6 +1,6 @@
 import './App.css';
 import React from "react";
-import { BrowserRouter, Route, Routes , HashRouter , HashRouter as Router } from "react-router-dom";
+import { BrowserRouter, Route, Routes , HashRouter } from "react-router-dom";
 import Main from "./Components/Main/Main";
 import Scale from './Scale';
 import AddResume from "./Components/AddResume/AddResume";
