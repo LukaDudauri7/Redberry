@@ -1,0 +1,62 @@
+﻿.background-image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("../../Images/shutterstock.png");
+}
+
+.logo{
+    width: 236px;
+    height: 38px;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 70px;
+    background-image: url("../../Images/logo.png");
+}
+
+.line{
+    width: 1780px;
+    border: 1px solid #1A1A1A;
+    margin-left: 70px;
+    margin-top: 89px;
+}
+
+.box-of-resume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -120px;
+    width: 100%;
+    height: 100%;
+    margin-left: 100px;
+}
+
+.resume{
+    width: 464px;
+    height: 60px;
+    background: #1A1A1A;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.add-resume{
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.agency-logo{
+    background-image: url("../../Images/agency-logo.png");
+    width: 299px;
+    height: 299px;
+    position: relative;
+    top: 78px;
+    right: 120px;
+}
