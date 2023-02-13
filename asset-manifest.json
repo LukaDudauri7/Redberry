@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Redberry/static/css/main.d35f01a1.css",
-    "main.js": "/Redberry/static/js/main.7b0fab59.js",
-    "static/media/shutterstock.png": "/Redberry/static/media/shutterstock.832365579848b64968d0.png",
-    "static/media/HelveticaNeue.ttc": "/Redberry/static/media/HelveticaNeue.67d426c3bd180e2ea838.ttc",
-    "static/media/ninomtavrulibold.ttf": "/Redberry/static/media/ninomtavrulibold.43eacc71b8fa4cfe138c.ttf",
-    "static/media/agency-logo.png": "/Redberry/static/media/agency-logo.065c53f5e3d5d6fd73f9.png",
-    "index.html": "/Redberry/index.html",
-    "main.d35f01a1.css.map": "/Redberry/static/css/main.d35f01a1.css.map",
-    "main.7b0fab59.js.map": "/Redberry/static/js/main.7b0fab59.js.map"
+    "main.css": "/static/css/main.17104a27.css",
+    "main.js": "/static/js/main.7b0fab59.js",
+    "static/media/shutterstock.png": "/static/media/shutterstock.832365579848b64968d0.png",
+    "static/media/HelveticaNeue.ttc": "/static/media/HelveticaNeue.67d426c3bd180e2ea838.ttc",
+    "static/media/ninomtavrulibold.ttf": "/static/media/ninomtavrulibold.43eacc71b8fa4cfe138c.ttf",
+    "static/media/agency-logo.png": "/static/media/agency-logo.065c53f5e3d5d6fd73f9.png",
+    "index.html": "/index.html",
+    "main.17104a27.css.map": "/static/css/main.17104a27.css.map",
+    "main.7b0fab59.js.map": "/static/js/main.7b0fab59.js.map"
   },
   "entrypoints": [
-    "static/css/main.d35f01a1.css",
+    "static/css/main.17104a27.css",
     "static/js/main.7b0fab59.js"
   ]
 }
