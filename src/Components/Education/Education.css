@@ -1,0 +1,9 @@
+.degree-date{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.degree{
+    margin-top: -10px;
+}

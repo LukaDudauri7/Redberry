@@ -1,0 +1,19 @@
+.dates {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+input[type="date"] {
+    margin-top: 10px;
+}
+
+
+.break-line {
+    width: 798px;
+    margin-top: 60px;
+    border: 1px solid #C1C1C1;
+}
+
+
