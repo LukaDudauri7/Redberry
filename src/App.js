@@ -8,15 +8,15 @@ import Experience from './Components/Experience/Experience';
 function App() {
   return (
     <div className="App">
-        <HashRouter>
       <Scale>
+        <HashRouter>
           <Routes>
             <Route path="/" element={<AddResume />} />
             <Route path="/Main" element={<Main />} />
             {/* <Route path="/Experience" element={<Experience />} /> */}
           </Routes>
-      </Scale>
         </HashRouter>
+      </Scale>
     </div>
   );
 }
