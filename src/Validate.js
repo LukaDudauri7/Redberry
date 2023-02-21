@@ -5,8 +5,8 @@ export function handleChange(event, error, setError) {
     let errors = error;
     let check = /^[ა-ჰ]+$/.test(value);
     switch (name) {
-        case 'firstName':
-            errors.firstName = (value.length < 2 || (value.length >= 2 && !check)) ? 'error' : errors.firstName.length > 0 ? 'valid' : '';
+        case 'name':
+            errors.name = (value.length < 2 || (value.length >= 2 && !check)) ? 'error' : errors.name.length > 0 ? 'valid' : '';
             break;
         case 'surname':
             errors.surname = (value.length < 2 || (value.length >= 2 && !check)) ? 'error' : errors.surname.length > 0 ? 'valid' : '';
@@ -14,8 +14,8 @@ export function handleChange(event, error, setError) {
         case 'email':
             errors.email = (!value.endsWith('@redberry.ge')) ? 'wide-error' : errors.email.length > 0 ? 'wide-valid' : '';
             break;
-        case 'number':
-            errors.number = (!value.startsWith('+995')) ? 'wide-error' : errors.number.length > 0 ? 'wide-valid' : '';
+        case 'phone_number':
+            errors.phone_number = (!value.startsWith('+995')) ? 'wide-error' : errors.phone_number.length > 0 ? 'wide-valid' : '';
         case 'position':
             errors.position = value.length < 2 ? 'wide-error' : errors.position.length > 0 ? 'wide-valid' : '';
             break;

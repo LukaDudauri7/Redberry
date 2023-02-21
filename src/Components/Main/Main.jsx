@@ -5,32 +5,43 @@ import Private from '../Private/Private';
 import Experience from '../Experience/Experience';
 import Resume from '../Resume/Resume';
 import Education from '../Education/Education';
+import axios from 'axios';
 function Main() {
     let page;
     const [formData, setFormData] = useState(JSON.parse(window.localStorage.getItem("formData")) || {
-        firstName: null,
+        name: null,
         surname: null,
-        aboutme: null,
+        about_me: null,
         email: null,
-        number: null,
-        position: null,
-        employer: null,
-        startdate: null,
-        enddate: null,
-        description: null,
-        school: null,
-        degree: null,
-        edudescription: null,
+        phone_number: null,
         schooldate: null,
-        file: null
+        image: null,
+        experiences : [
+            {
+                position: null,
+                employer: null,
+                start_date: null,
+                due_date: null,
+                description: null,
+            }
+        ],
+        educations : [
+            {
+                institute: null,
+                degree: null,
+                degree_id: 7,
+                due_date: null,
+                description: null,
+            }
+        ]
     });
 
     const [error, setError] = useState({
-        firstName: '',
+        name: '',
         surname: '',
-        aboutme: '',
+        about_me: '',
         email: '',
-        number: '',
+        phone_number: '',
         position: '',
         employer: '',
         school: '',
@@ -42,38 +53,31 @@ function Main() {
         localStorage.setItem("formData", JSON.stringify(formData));
     }, [formData])
 
-    // const submitForm = () => {
-    //     // const formData = new FormData();
-    //     // formData.append("file", selectedFile);
-
-    //     // axios
-    //     //   .post(UPLOAD_URL, formData)
-    //     //   .then((res) => {
-    //     //     alert("File Upload success");
-    //     //   })
-    //     //   .catch((err) => alert("File Upload Error"));
-    // };
-
     const [pageNum, setpageNum] = useState(0);
     const isEmpty = (object) => {
-        console.log(object)
-        for( var props in object){
-            if(object[props] == 'error')
+        for (var props in object) {
+            if (object[props] == 'error')
                 return false
         }
         return true
     }
     const pageNumNext = () => {
-        console.log(isEmpty(error))
-        if(isEmpty(error)){
+        if (isEmpty(error)) {
             setpageNum(pageNum + 1);
         }
     }
     const pageNumBefore = () => {
         setpageNum(pageNum - 1);
     }
-    const generateResume = () => {
-        
+    const generateResume = () => { 
+        console.log(formData)
+        axios.post('https://resume.redberryinternship.ge/api/cvs', {...formData} )
+            .then((response) => {
+                console.log(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
     }
 
     switch (pageNum) {
@@ -120,21 +124,21 @@ function Main() {
             </div>
             <div className='cv'>
                 <Resume
-                    firstName={formData.firstName ? formData.firstName : ''}
+                    name={formData.name ? formData.name : ''}
                     surname={formData.surname ? formData.surname : ''}
                     cvemail={formData.email ? formData.email : ''}
-                    mobilenumber={formData.number ? formData.number : ''}
-                    cvaboutme={formData.aboutme ? formData.aboutme : ''}
+                    phone_number={formData.phone_number ? formData.phone_number : ''}
+                    about_me={formData.about_me ? formData.about_me : ''}
                     position={formData.position ? formData.position : ''}
                     employer={formData.employer ? formData.employer : ''}
-                    startdate={formData.startdate ? formData.startdate : ''}
-                    enddate={formData.enddate ? formData.enddate : ''}
-                    description={formData.description ? formData.description : ''}
-                    school={formData.school ? formData.school : ''}
-                    degree={formData.degree ? formData.degree : ''}
+                    startdate={formData.experiences[0].start_date ? formData.experiences[0].start_date : ''}
+                    enddate={formData.experiences[0].due_date ? formData.experiences[0].due_date : ''}
+                    description={formData.experiences[0].description ? formData.experiences[0].description : ''}
+                    school={formData.educations[0].school ? formData.educations[0].school : ''}
+                    degree={formData.educations[0].degree ? formData.educations[0].degree : ''}
                     schooldate={formData.schooldate ? formData.schooldate : ''}
-                    edudescription={formData.edudescription ? formData.edudescription : ''}
-                    file={formData.file ? formData.file : ''}
+                    edudescription={formData.educations[0].description ? formData.educations[0].description : ''}
+                    image={formData.image ? formData.image : ''}
                 />
             </div>
         </div>
